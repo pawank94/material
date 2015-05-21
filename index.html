@@ -1,0 +1,98 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}</style>
+    <title>Material design</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index_files/main.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="index_files/bootstrap.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="index_files/angularmaterial.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body class="ng-scope" ng-app="mainapp">
+    <div class="containermain container-fluid ng-scope" ng-controller="mycont">
+    <md-toolbar class="md-warn">
+      <p>One Account. All Of Google</p>
+    </md-toolbar>
+      <div class="login col-md-offset-4 col-md-4">
+        <div class="credform">
+          <div class="photo">
+            <div class="face">
+            </div>
+            <div class="body">
+            </div>
+          </div>
+          <br>
+          <span class="message"> Sign In for google</span>
+          <br>
+          <form name="form" class="form-inline ng-pristine ng-valid"><br>
+            <span class="emailheader ng-hide" ng-show="showehead">Email</span>
+            <br>
+            <input value="Email" class="form-control inp ng-pristine ng-untouched ng-valid" name="email" ng-focus="clickemail()" ng-model="email" ng-blur="bluremail()" ng-class="{'focused':focuse,'error':form.email.$dirty&amp;&amp;uieclass==true&amp;&amp;focuse==false}" type="text">
+            <br>
+            <span ng-show="form.email.$dirty&amp;&amp;uieclass==true&amp;&amp;focuse==false" class="droperror ng-hide"> Email is required</span>
+
+            <br>
+            <span class="passwordheader ng-hide" ng-show="showphead">Password</span>
+            <br>
+            <input class="form-control inp ng-pristine ng-untouched ng-valid" name="pass" ng-focus="clickpmail()" ng-model="pass" ng-blur="blurpass()" ng-class="{'focused':focusp,'error':form.email.$dirty&amp;&amp;uipclass==true&amp;&amp;focusp==false}" type="password">
+            <br>
+            <span ng-show="form.email.$dirty&amp;&amp;uipclass==true&amp;&amp;focusp==false" class="droperror ng-hide"> password is required</span>
+            <br>
+            <input class="button btn btn-success" value="Submit" type="submit">
+            <br>
+            <input class="check" type="checkbox"><span>Remember me</span>
+            <hr class="line">
+            <a href="_blank" class="anchor">Create an account</a>
+      </form></div>
+    </div>
+    </div>
+    <script src="index_files/angular.js" charset="utf-8"></script>
+    <script src="index_files/angular-animate.js" charset="utf-8"></script>
+    <script>
+     var myapp=angular.module("mainapp",[]);
+     myapp.controller("mycont",function($scope){
+       $scope.email="Email";
+       $scope.pass="password";
+       $scope.showehead=false;
+       $scope.showphead=false;
+        $scope.clickemail=function(){
+          $scope.showehead=true;
+          $scope.focuse=true;
+          if($scope.email=='Email')
+          $scope.email="";
+        };
+        $scope.clickpmail=function(){
+          $scope.showphead=true;
+          $scope.focusp=true;
+          if($scope.pass=="password")
+          $scope.pass="";
+        };
+        $scope.bluremail=function(){
+          $scope.focuse=false;
+          if($scope.email=="")
+          {
+            $scope.uieclass=true;
+            $scope.email="Email";
+          $scope.showehead=false;
+          }
+          else
+          {
+            $scope.uieclass=false;
+          }
+        };
+        $scope.blurpass=function(){
+          $scope.focusp=false;
+          if($scope.pass=="")
+          {
+            $scope.uipclass=true;
+            $scope.pass="password";
+          $scope.showphead=false;
+          }
+          else
+          {
+            $scope.uipclass=false;
+          }
+        };
+      });
+    </script>
+
+
+</body></html>
