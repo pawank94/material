@@ -22,19 +22,19 @@
           <br>
           <span class="message"> Sign In for google</span>
           <br>
-          <form name="form" class="form-inline ng-pristine ng-valid"><br>
-            <span class="emailheader ng-hide" ng-show="showehead">Email</span>
+          <form name="form" class="form-inline row-fluid"><br>
+            <span class="emailheader" ng-show="showehead">Email</span>
             <br>
-            <input value="Email" class="form-control inp ng-pristine ng-untouched ng-valid" name="email" ng-focus="clickemail()" ng-model="email" ng-blur="bluremail()" ng-class="{'focused':focuse,'error':form.email.$dirty&amp;&amp;uieclass==true&amp;&amp;focuse==false}" type="text">
+            <input value="Email" class="form-control inp input-block-level" name="email" ng-focus="clickemail()" ng-model="email" ng-blur="bluremail()" ng-class="{'focused':focuse,'error':form.email.$dirty&amp;&amp;uieclass==true&amp;&amp;focuse==false}" type="text">
             <br>
-            <span ng-show="form.email.$dirty&amp;&amp;uieclass==true&amp;&amp;focuse==false" class="droperror ng-hide"> Email is required</span>
+            <span ng-show="form.email.$dirty&amp;&amp;uieclass==true&amp;&amp;focuse==false" class="droperror"> Email is required</span>
 
             <br>
             <span class="passwordheader ng-hide" ng-show="showphead">Password</span>
             <br>
-            <input class="form-control inp ng-pristine ng-untouched ng-valid" name="pass" ng-focus="clickpmail()" ng-model="pass" ng-blur="blurpass()" ng-class="{'focused':focusp,'error':form.email.$dirty&amp;&amp;uipclass==true&amp;&amp;focusp==false}" type="password">
+            <input class="form-control inp input-block-level" name="pass" ng-focus="clickpmail()" ng-model="pass" ng-blur="blurpass()" ng-class="{'focused':focusp,'error':form.email.$dirty&amp;&amp;uipclass==true&amp;&amp;focusp==false}" type="password">
             <br>
-            <span ng-show="form.email.$dirty&amp;&amp;uipclass==true&amp;&amp;focusp==false" class="droperror ng-hide"> password is required</span>
+            <span ng-show="form.email.$dirty&amp;&amp;uipclass==true&amp;&amp;focusp==false" class="droperror"> password is required</span>
             <br>
             <input class="button btn btn-success" value="Submit" type="submit">
             <br>

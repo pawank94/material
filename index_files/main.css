@@ -126,8 +126,7 @@ md-toolbar p{
   color: red !important;;
 }
 .button{
-  position: absolute;
-  top:120%;
+  position: relative;
   left:70%;
   z-index: 5;
   box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.3)
